@@ -1,0 +1,21 @@
+package org.github.caishijun.eshop.cache.ha.cache.local;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 品牌缓存
+ */
+public class BrandCache {
+
+    private static Map<Long, String> brandMap = new HashMap<Long, String>();
+
+    static {
+        brandMap.put(1L, "iphone");
+    }
+
+    public static String getBrandName(Long brandId) {
+        return brandMap.get(brandId);
+    }
+
+}
